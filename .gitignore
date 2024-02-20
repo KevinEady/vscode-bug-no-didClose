@@ -1,0 +1,14 @@
+out
+dist
+node_modules
+grammars/*.json
+*.vsix
+coverage
+.vscode-test
+build
+prebuilds
+native/test/scripts/ecompile.cfg
+.vscode/c_cpp_properties.json
+.vscode/settings.json
+.cache
+.DS_Store

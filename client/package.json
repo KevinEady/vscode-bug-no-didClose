@@ -1,0 +1,31 @@
+{
+	"name": "lsp-sample-client",
+	"description": "VSCode part of EScript language server",
+	"contributors": [
+		{
+			"name": "POL Core Team",
+			"url": "https://github.com/polserver"
+		}
+	],
+	"license": "MIT",
+	"version": "0.1.0",
+	"publisher": "polserver",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/polserver/vscode-escript"
+	},
+	"engines": {
+		"vscode": "^1.78.0"
+	},
+	"scripts": {
+		"test": "echo E2E tests currently disabled, see ./jest.e2.config.js",
+		"_test": "node ./test/runTest.js"
+	},
+	"dependencies": {
+		"vscode-languageclient": "^8.1.0"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.86.0",
+		"@vscode/test-electron": "^2.3.2"
+	}
+}

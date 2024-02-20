@@ -1,0 +1,51 @@
+{
+	"name": "escript-lsp",
+	"version": "0.11.2",
+	"description": "EScript for Visual Studio Code. Provides code completion, navigation, and more.",
+	"contributors": [
+		{
+			"name": "POL Core Team",
+			"url": "https://github.com/polserver"
+		}
+	],
+	"license": "MIT",
+	"publisher": "polserver",
+	"categories": [
+		"Programming Languages"
+	],
+	"keywords": [
+		"POL",
+		"polserver",
+		"Escript"
+	],
+	"engines": {
+		"vscode": "^1.78.0"
+	},
+	"main": "./client/out/extension.js",
+	"contributes": {
+		"languages": [
+			{
+				"id": "escript",
+				"aliases": [
+					"EScript",
+					"escript"
+				],
+				"extensions": [
+					".txt"
+				],
+				"configuration": "./language-configurations/escript.json"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "cd client && npm install && cd ../server && npm install",
+		"watch": "tsc -b -w",
+		"build": "tsc -b",
+		"clean": "rimraf client/out server/out"
+	},
+	"devDependencies": {
+		"rimraf": "^5.0.1",
+		"ts-loader": "^9.4.3",
+		"typescript": "^5.0.4"
+	}
+}
